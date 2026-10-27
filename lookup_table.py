@@ -42,8 +42,11 @@ def lookup_table(item_id):
         40010: ["Clothing", 20.00, "Polarized Sunglasses"]
     }
 
-    key = int(float(item_id))
-    return lookup_data[key][2]
+    category = lookup_data[item_id][0]
+    price = lookup_data[item_id][1]
+    item_desc = lookup_data[item_id][2]
 
+    return category, price, item_desc
 
-lookup_table()
+print(lookup_table(40010))
+
